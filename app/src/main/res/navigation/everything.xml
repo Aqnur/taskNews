@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_everything"
+    app:startDestination="@id/everythingFragment">
+
+
+    <fragment
+        android:id="@+id/everythingFragment"
+        android:name="kz.news.app.ui.news.everything.EverythingFragment"
+        android:label="Everything"
+        tools:layout="@layout/fragment_everything">
+        <action
+            android:id="@+id/action_everythingFragment_to_navigation_news_details"
+            app:destination="@id/navigation_news_details" >
+            <argument
+                android:name="article"
+                app:argType="kz.news.app.data.models.Article" />
+        </action>
+    </fragment>
+
+    <include app:graph="@navigation/news_details" />
+
+</navigation>

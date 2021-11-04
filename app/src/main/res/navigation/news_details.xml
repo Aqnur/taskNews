@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_news_details"
+    app:startDestination="@id/newsDetailsFragment">
+
+    <fragment
+        android:id="@+id/newsDetailsFragment"
+        android:name="kz.news.app.ui.news.details.NewsDetailsFragment"
+        android:label="Details"
+        tools:layout="@layout/fragment_news_details">
+        <argument
+            android:name="article"
+            app:argType="kz.news.app.data.models.Article" />
+    </fragment>
+
+</navigation>
